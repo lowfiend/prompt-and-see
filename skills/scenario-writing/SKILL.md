@@ -9,6 +9,8 @@ description: 撰寫 BDD 場景的紀律：中文 Gherkin、按鈕級粒度、成
 
 `behaviors/<slug>/*.feature` 是整個功能**唯一手寫**的行為描述。行為地圖、規格文件、handoff、測試，全部是從場景檔單向生成的產物。要改行為，只改這裡。
 
+> 設定固定在 `behaviors/config.md`；其「場景資料夾」欄位決定實際根目錄（本文以預設 `behaviors/` 行文）；沒有設定檔就用預設值。
+
 **場景檔一有改動，地圖即過期**：任何 `.feature` 修改落地後，立刻依 `behavior-mapping` 重新生成行為地圖，不等使用者提醒。
 
 ## 檔案佈局

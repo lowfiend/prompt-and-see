@@ -1,6 +1,6 @@
 ---
 name: setup-prompt-and-see
-description: 選填設定：場景資料夾、場景語言、下游規格格式。沒跑也能用——各 skill 有預設值。
+description: 選填設定：場景資料夾、場景語言。沒跑也能用——各 skill 有預設值。
 disable-model-invocation: true
 ---
 
@@ -12,8 +12,7 @@ disable-model-invocation: true
 
 1. **場景資料夾**：預設 `behaviors/`。既有專案已有慣例（如 `.spec/`）就沿用。
 2. **場景語言**：預設 `zh-TW` 中文 Gherkin；也可 `en`。
-3. **下游規格格式**：SpecKit／OpenSpec／自家格式／不需要，`/to-spec` 會照這裡的設定。
 
-答案依 [CONFIG-FORMAT.md](./CONFIG-FORMAT.md) 的樣板寫入 `behaviors/config.md`——三個標題一律齊全，沒設定的寫「未設定」。
+答案依 [CONFIG-FORMAT.md](./CONFIG-FORMAT.md) 的樣板寫入 `behaviors/config.md`——兩個標題一律齊全，沒設定的寫「未設定」。
 
 完成後展示主流程一句話：**`/map-it` 盤行為 → `/to-mvp` 做成可操作的靜態 MVP → 想改就繼續下指令 → 交接時 `/to-handoff`。**

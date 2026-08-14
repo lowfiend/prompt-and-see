@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 把目前的 BDD 場景做成**免安裝、免編譯、直接打開就能操作**的靜態 HTML MVP，讓人在寫任何正式程式之前，親眼看到、親手走過每個行為。
 
-> 設定住 `behaviors/config.md`（「場景資料夾」決定場景根目錄，本文以預設 `behaviors/` 行文）；沒有設定檔就用預設值。MVP 固定住 `behaviors/mvp/`，不可配置。
+> 設定檔住 `behaviors/config.md`（「場景資料夾」決定場景根目錄，本文以預設 `behaviors/` 行文）；沒有設定檔就用預設值。MVP 固定住 `behaviors/mvp/`，不可配置。
 
 ## MVP 的固定技術邊界
 

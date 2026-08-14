@@ -57,10 +57,10 @@
 
 | skill | 做什麼 |
 |---|---|
-| `/setup-prompt-and-see` | 選填設定：場景資料夾、語言、下游規格格式。沒跑也能用，各 skill 有預設值 |
+| `/setup-prompt-and-see` | 選填設定：場景資料夾、語言。沒跑也能用，各 skill 有預設值 |
 | `/map-it` | 從一句需求開始：WHY 輕訪談 → 展開成功／失敗／邊界場景 → 產 `.feature` → 畫地圖給你看；改既有需求也是它 |
 | `/to-mvp` | 照目前場景實作靜態 HTML MVP：有既有 MVP 就原地增量修改，沒有就建立；動手前先摘要、你同意才改 |
-| `/to-spec` | 把當前場景忠實轉成下游規格格式（SpecKit／OpenSpec／自家格式），技術缺口明示 |
+| `/to-spec` | 把當前場景生成極簡 spec：行為照搬＋技術決定訪談補齊＋拆票＋不做什麼。RD 有自己跑順的規格工具就不需要它——直接拿場景檔當輸入 |
 | `/to-handoff` | 生成簡短交接導讀：場景與地圖路徑、MVP 入口與操作方式、已知事項；呼叫就生成，不設閘門 |
 
 **模型自動呼叫**（agent 情境符合就會自己用；你也可以手動呼叫）
@@ -85,10 +85,10 @@ behaviors/
     ├── *.feature            ← ✍️ 行為描述（手寫）
     ├── map.md               ← ⚙️ 行為地圖（由場景重生）
     ├── handoff.md           ← ⚙️ 交接導讀（依當下狀態生成）
-    └── spec/                ← ⚙️ 下游規格翻譯件
+    └── spec/                ← ⚙️ 極簡 spec（行為＋技術決定＋拆票＋不做什麼）
 ```
 
-- ✍️ 手寫的行為描述只有場景檔；⚙️ 標記的是生成文件，手改無效——`map.md`、`spec/` 由當前場景整檔重生，`handoff.md` 依當下場景、MVP 與已知事項生成。
+- ✍️ 手寫的行為描述只有場景檔；⚙️ 標記的是生成文件，手改無效——`map.md`、`spec/` 由當前場景整檔重生（spec 的技術決定與不做什麼兩節例外：以訪談定案為準，重生時沿用），`handoff.md` 依當下場景、MVP 與已知事項生成。
 - **MVP 是 code，不是生成物**：人與 agent 都可維護，無關既有功能不因場景沒寫到而被刪；歷史交給 Git。
 - slug 用領域語言取名（「訂單查詢」，不是「order-v2」）。
 
@@ -115,7 +115,7 @@ skills 之間不自動串接——每站做完由**你**決定下一棒；skill 
 
 ## 致謝與引用
 
-- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例。
+- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例；`to-spec` 的拆票紀律（垂直切片、Blocked by）與「不做什麼」節借鑑其 `to-tickets` 與 `to-spec`。
 - **Eric Evans,《Domain-Driven Design》**：Ubiquitous Language——`CONTEXT.md` 詞彙表的理論根源。
 - **Dan North**：BDD 與 Given/When/Then 的提出者。
 - **[Gherkin](https://cucumber.io/docs/gherkin/)（Cucumber 專案）**：場景檔格式。

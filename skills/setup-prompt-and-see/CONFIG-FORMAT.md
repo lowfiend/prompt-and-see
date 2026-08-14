@@ -1,6 +1,6 @@
 # behaviors/config.md 格式
 
-`/setup-prompt-and-see` 輸出的固定樣板。**三個標題一律齊全**——沒設定的寫「未設定」，不准省略標題；下游 skill 按標題讀取，格式穩定它們才好讀。
+`/setup-prompt-and-see` 輸出的固定樣板。**兩個標題一律齊全**——沒設定的寫「未設定」，不准省略標題；下游 skill 按標題讀取，格式穩定它們才好讀。
 
 MVP 不是設定項：固定住 `behaviors/mvp/`，入口固定是 `behaviors/mvp/index.html`。
 
@@ -18,10 +18,6 @@ behaviors/
 
 ## 場景語言
 zh-TW
-
-## 下游規格格式
-未設定
-<!-- 可選：SpecKit spec.md／OpenSpec proposal／自家格式（附既有檔案路徑） -->
 ```
 
 ## 誰讀哪一格
@@ -30,4 +26,3 @@ zh-TW
 |---|---|
 | 場景資料夾 | **所有 skills**（各 skill 文件以預設 `behaviors/` 行文，實際路徑以此格為準） |
 | 場景語言 | `map-it`、`behavior-mapping` |
-| 下游規格格式 | `to-spec` |

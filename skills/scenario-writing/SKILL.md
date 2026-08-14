@@ -11,7 +11,7 @@ description: 撰寫 BDD 場景的紀律：中文 Gherkin、成功與合理的失
 
 它描述**目前需求**，不是整個 app 既有行為的總帳——場景沒寫到的既有功能，不因此被刪除。
 
-> 設定住 `behaviors/config.md`（「場景資料夾」欄位決定實際根目錄）；沒有設定檔就用預設值。
+> 設定檔住 `behaviors/config.md`（「場景資料夾」欄位決定實際根目錄）；沒有設定檔就用預設值。
 
 **場景檔一有改動**，立刻依 `behavior-mapping` 重畫行為地圖，不等使用者提醒。
 
@@ -19,7 +19,7 @@ description: 撰寫 BDD 場景的紀律：中文 Gherkin、成功與合理的失
 
 - 以**使用者目標／能力**組織需求，不以畫面強制切割；一條場景可以跨多個頁面。
 - 檔名用領域語言，不用技術語言（「查詢訂單」，不是「order-list-api」）。用詞一致性遵守 `domain-language`（詞彙表在 `CONTEXT.md`）。
-- WHY 訪談得到的角色、目的與價值，直接寫進 feature description，不另建決策紀錄。
+- WHY 訪談得到的角色、目的與價值，直接寫進 feature description，不另建決策紀錄；訪談拍板的排除項也寫進 feature description 的「不做」段——下游 spec 的「不做什麼」由此收割。
 
 ## 格式
 

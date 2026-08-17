@@ -47,7 +47,7 @@
 
 ## 主流程一句話
 
-**`/map-it` 盤行為 → `/to-mvp` 做成可直接打開的靜態 MVP → 想改就繼續下指令 → 要交給 RD 時 `/to-handoff`（或 `/to-spec`）。**
+**`/map-it` 盤行為 → `/to-mvp` 做成可直接打開的靜態 MVP → 想改就繼續下指令 → 交接給 RD 用 `/to-handoff`；要讓 RD 領票施工，先 `/to-spec` 產拆票，再 `/build-it` 一票一票做。**
 
 指令就是流程，對話中的確認就是授權——不需要被記錄成狀態。
 
@@ -62,6 +62,7 @@
 | `/to-mvp` | 照目前場景實作靜態 HTML MVP：有既有 MVP 就原地增量修改，沒有就建立；動手前先摘要、你同意才改 |
 | `/to-spec` | 把當前場景生成極簡 spec：行為照搬＋技術決定訪談補齊＋拆票＋不做什麼。RD 有自己跑順的規格工具就不需要它——直接拿場景檔當輸入 |
 | `/to-handoff` | 生成簡短交接導讀：場景與地圖路徑、MVP 入口與操作方式、已知事項；呼叫就生成，不設閘門 |
+| `/build-it` | 領票施工（RD 端）：領一張 blockers 已完成的票，照場景與 MVP 施工，場景即驗收（能測則測、不行退演示），照實回報；一次只做一票，下一票建議開新對話 |
 
 **模型自動呼叫**（agent 情境符合就會自己用；你也可以手動呼叫）
 
@@ -71,6 +72,15 @@
 | `scenario-writing` | 場景紀律：中文 Gherkin、成功與合理的失敗／空狀態、跨需求界線、BDD 弱項聲明 |
 | `behavior-mapping` | 地圖紀律：畫面＝節點、失敗標紅、圖不比場景多；場景一改立刻重畫 |
 | `domain-language` | 領域語言紀律：讀寫 `CONTEXT.md` 詞彙表（詞＋定義＋Avoid），全專案用同一套詞 |
+
+**施工紀律**（模型自動呼叫——給施工端的通用紀律；與上游流程互相獨立，裝在產品 repo 就會在寫 code 時生效，宿主慣例永遠優先）
+
+| skill | 做什麼 |
+|---|---|
+| `architecture-governance` | 模組化是決定不是預設：拆不拆的訊號、分層責任、依賴方向鐵則、過度設計自省 |
+| `ui-governance` | 語意元件優先（按後果判定）、有語意的視覺值走 token、重複模式先評估抽共用、只做行為所需的狀態、不遮內容、無障礙 |
+| `i18n-governance` | 使用者可見文字不寫死、key 結構化命名、同義複用、動態文字用具名佔位符 |
+| `image-governance` | 圖像資產命名結構化（含狀態變體）、共用／功能歸屬明確、路徑不散落——多資產或整批替換才集中 |
 
 ## behaviors/ 結構
 
@@ -115,7 +125,7 @@ skills 之間不自動串接——每站做完由**你**決定下一棒；skill 
 
 ## 致謝與引用
 
-- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例；`to-spec` 的拆票紀律（垂直切片、Blocked by）與「不做什麼」節借鑑其 `to-tickets` 與 `to-spec`。
+- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例；`to-spec` 的拆票紀律（垂直切片、Blocked by）與「不做什麼」節借鑑其 `to-tickets` 與 `to-spec`；`build-it` 的先紅後綠驗收借鑑其 `tdd`——要更完整的 TDD 紀律（反模式、mocking），可將其 `tdd` 直接裝進產品 repo 與本套合用。
 - **Eric Evans,《Domain-Driven Design》**：Ubiquitous Language——`CONTEXT.md` 詞彙表的理論根源。
 - **Dan North**：BDD 與 Given/When/Then 的提出者。
 - **[Gherkin](https://cucumber.io/docs/gherkin/)（Cucumber 專案）**：場景檔格式。

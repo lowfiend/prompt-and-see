@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # setup-prompt-and-see — 選填設定
 
-**不是必經步驟**：缺少 config 時各 skill 用預設值，真正需要時再問。能從 repo 自己查到的資訊（專案用什麼語言）不問使用者。MVP 固定住 `behaviors/mvp/`、入口固定是 `index.html`——不是設定項。
+**不是必經步驟**：缺少 config 時各 skill 用預設值，真正需要時再問。能從 repo 自己查到的資訊（專案用什麼語言）不問使用者。MVP 固定住 `behaviors/mvp/`、入口固定是 `index.html`；設計參考固定住 `behaviors/design/`、入口固定是 `design.md`（選填）——都不是設定項。
 
 用 `interviewing` 的問法，一輪問完（每題附推薦答案）：
 

@@ -2,7 +2,7 @@
 
 `/setup-prompt-and-see` 輸出的固定樣板。**兩個標題一律齊全**——沒設定的寫「未設定」，不准省略標題；下游 skill 按標題讀取，格式穩定它們才好讀。
 
-MVP 不是設定項：固定住 `behaviors/mvp/`，入口固定是 `behaviors/mvp/index.html`。
+MVP 不是設定項：固定住 `behaviors/mvp/`，入口固定是 `behaviors/mvp/index.html`。設計參考也不是：選填、固定住 `behaviors/design/`，入口固定是 `behaviors/design/design.md`。
 
 ## 設定檔的位置（固定，不可配置）
 

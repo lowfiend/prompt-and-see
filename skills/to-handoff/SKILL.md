@@ -8,16 +8,17 @@ disable-model-invocation: true
 
 使用者呼叫就依**目前狀態**生成 `behaviors/<slug>/handoff.md`，不設任何閘門。它是**導讀**，不是內容複本——場景、地圖、MVP 都在 repo 裡活著，內嵌快照只會與它們漂移。
 
-> 設定檔住 `behaviors/config.md`（「場景資料夾」決定場景根目錄）；沒有設定檔就用預設值。MVP 固定住 `behaviors/mvp/`、入口固定是 `behaviors/mvp/index.html`——直接引用，不搜尋、不推測、不記錄額外狀態。
+> 設定檔住 `behaviors/config.md`（「場景資料夾」決定場景根目錄）；沒有設定檔就用預設值。MVP 固定住 `behaviors/mvp/`、入口固定是 `behaviors/mvp/index.html`；設計參考（選填）固定住 `behaviors/design/`、入口固定是 `behaviors/design/design.md`——都直接引用，不搜尋、不推測、不記錄額外狀態。
 
 ## 內容（保持短）
 
 1. 本次需求的 `.feature` 與 `map.md` 路徑。
 2. MVP：`behaviors/mvp/`，入口：`behaviors/mvp/index.html`（直接打開就能操作，免安裝免編譯）。
-3. 本次涉及的 HTML／CSS／JS 檔案。
-4. 如何操作主要情境與失敗／空狀態。
-5. **已知事項**：尚未完成、尚未驗證的部分誠實列出——不阻擋交付，讓下游知情。
-6. 有 spec 就指向 `behaviors/<slug>/spec/`。
+3. 設計參考（若存在）：`behaviors/design/design.md`。沒有入口、或 `design/` 裡有 `*.feature`（撞名的舊需求資料夾），視為不存在、不列。
+4. 本次涉及的 HTML／CSS／JS 檔案。
+5. 如何操作主要情境與失敗／空狀態。
+6. **已知事項**：尚未完成、尚未驗證的部分誠實列出——不阻擋交付，讓下游知情。
+7. 有 spec 就指向 `behaviors/<slug>/spec/`。
 
 ## 角色提示（一句話級）
 

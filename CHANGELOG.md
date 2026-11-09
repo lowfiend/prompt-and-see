@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.1 — 2026-11-09
+
+可以裝成 **Claude Code plugin**：新增 `.claude-plugin/plugin.json` 與 `marketplace.json`，`claude plugin marketplace add lowfiend/prompt-and-see` 後 `claude plugin install prompt-and-see@prompt-and-see` 即可，之後 `claude plugin update` 跟版。skills 內容不變。
+
+- **CONTRIBUTING.md**：新增貢獻指南——issue 門檻（觀察到的失敗＋符合哲學）、已決定不做（閘門、產業專屬、個人偏好、可組合的新 skill）、驗證步驟、commit 慣例、PR 只開放協作者、用 AI 寫 issue 的規矩
+- **README**：安裝段加 plugin 裝法（建議）與指令前綴說明，複製進單一專案的做法保留；加一行指向 CONTRIBUTING
+
 ## 0.7.0 — 2026-11-09
 
 新增第五支施工紀律 **`reproducing`**：一個 finding 是一個主張，不是事實。來源不分級、證據才分級——使用者說的、issue 寫的、子代理回報的、自己讀碼推的，進門時一律待校驗；跑出來、留下紀錄才是已重現，才准改 code；修完用同一組步驟再量；被推翻就還原。回報分「量到的事實」與「推測」兩欄，未重現的也列出。五個入口中最要緊的是「一批 code 改完、準備回報之前」——沒有人主張任何事，自己重讀 diff 找一輪，直到沒有新的已重現才回報。不教怎麼建重現迴路（指向 Matt Pocock 的 `diagnosing-bugs`）、不管測試怎麼寫、不決定修法取捨。

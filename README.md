@@ -110,13 +110,24 @@ behaviors/
 
 ## 安裝
 
-把 `skills/` 底下的資料夾複製到目標專案的 `.claude/skills/`：
+**裝成 plugin**（建議，之後 `claude plugin update prompt-and-see` 一行就能跟上新版）：
+
+```bash
+claude plugin marketplace add lowfiend/prompt-and-see
+claude plugin install prompt-and-see@prompt-and-see
+```
+
+裝成 plugin 時，使用者呼叫的指令帶前綴：`/prompt-and-see:map-it`、`/prompt-and-see:to-mvp`……本文一律寫短名稱。
+
+**或複製進單一專案**（不想裝全域、或要改內容）：把 `skills/` 底下的資料夾複製到目標專案的 `.claude/skills/`：
 
 ```bash
 cp -r skills/* <你的專案>/.claude/skills/
 ```
 
 想調整預設路徑再跑 `/setup-prompt-and-see`（選填）。
+
+要回報問題或提想法，先讀 [`CONTRIBUTING.md`](CONTRIBUTING.md)：issue 要有真實 session 的觀察失敗與重現步驟。
 
 ## 接力方式
 

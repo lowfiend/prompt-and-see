@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "prompt-and-see",
+  "description": "prompt-and-see：在 AI 動工之前，看見它要做的每一個行為。",
+  "owner": {
+    "name": "Neyo Hsieh",
+    "url": "https://github.com/lowfiend"
+  },
+  "plugins": [
+    {
+      "name": "prompt-and-see",
+      "description": "訪談 → 場景檔 → 行為地圖 → 免安裝靜態 MVP → 拆票 → 領票施工，外加六支施工紀律。",
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}

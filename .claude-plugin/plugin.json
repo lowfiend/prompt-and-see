@@ -1,0 +1,38 @@
+{
+  "name": "prompt-and-see",
+  "version": "0.7.1",
+  "description": "在 AI 動工之前，看見它要做的每一個行為：訪談 → 場景檔 → 行為地圖 → 免安裝靜態 MVP → 拆票 → 領票施工，外加六支施工紀律（模組化、介面、文字、圖像、可重現、根治）。",
+  "author": {
+    "name": "Neyo Hsieh",
+    "url": "https://github.com/lowfiend"
+  },
+  "repository": "https://github.com/lowfiend/prompt-and-see",
+  "homepage": "https://github.com/lowfiend/prompt-and-see",
+  "license": "MIT",
+  "keywords": [
+    "bdd",
+    "gherkin",
+    "behavior-mapping",
+    "mvp",
+    "interviewing",
+    "skills"
+  ],
+  "skills": [
+    "./skills/architecture-governance",
+    "./skills/behavior-mapping",
+    "./skills/build-it",
+    "./skills/domain-language",
+    "./skills/i18n-governance",
+    "./skills/image-governance",
+    "./skills/interviewing",
+    "./skills/map-it",
+    "./skills/reproducing",
+    "./skills/root-causing",
+    "./skills/scenario-writing",
+    "./skills/setup-prompt-and-see",
+    "./skills/to-handoff",
+    "./skills/to-mvp",
+    "./skills/to-spec",
+    "./skills/ui-governance"
+  ]
+}

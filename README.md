@@ -81,6 +81,8 @@
 | `ui-governance` | 語意元件優先（按後果判定）、有語意的視覺值走 token、重複模式先評估抽共用、只做行為所需的狀態、不遮內容、無障礙 |
 | `i18n-governance` | 使用者可見文字不寫死、key 結構化命名、同義複用、動態文字用具名佔位符 |
 | `image-governance` | 圖像資產命名結構化（含狀態變體）、共用／功能歸屬明確、路徑不散落——多資產或整批替換才集中 |
+| `reproducing` | 可重現紀律：任何「行為不對」的主張不分來源都是待校驗，跑出來、留紀錄才算問題；只修已重現的，修完同一把尺再量；每批 code 改完收尾前自己先找一輪 |
+| `root-causing` | 根治紀律：修在原因發生處、不在症狀顯現處；先說出被破壞的不變量才准修；workaround 只准以標註的診斷實驗或使用者明示接受（附根治待辦）的身分存在 |
 
 ## behaviors/ 結構
 
@@ -129,7 +131,7 @@ skills 之間不自動串接——每站做完由**你**決定下一棒；skill 
 
 ## 致謝與引用
 
-- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例；`to-spec` 的拆票紀律（垂直切片、Blocked by）與「不做什麼」節借鑑其 `to-tickets` 與 `to-spec`；`build-it` 的先紅後綠驗收借鑑其 `tdd`——要更完整的 TDD 紀律（反模式、mocking），可將其 `tdd` 直接裝進產品 repo 與本套合用。
+- **[Matt Pocock — skills](https://github.com/mattpocock/skills)**（MIT）：本 repo 的結構哲學直接承自它——使用者呼叫／模型呼叫二分、小而可組合、setup 慣例、命名精神。`interviewing` 源自其 `grilling`，`domain-language` 是其 `domain-modeling` 的精簡化，`CONTEXT.md` 格式沿用其慣例；`to-spec` 的拆票紀律（垂直切片、Blocked by）與「不做什麼」節借鑑其 `to-tickets` 與 `to-spec`；`build-it` 的先紅後綠驗收借鑑其 `tdd`——要更完整的 TDD 紀律（反模式、mocking），可將其 `tdd` 直接裝進產品 repo 與本套合用；`reproducing` 只管「先重現才准修」、`root-causing` 只管「修在原因處」這兩條紀律，建重現迴路與假設驗證的完整方法論（失敗測試、二分、差異比對、可否證假設）同樣可直接裝其 `diagnosing-bugs` 合用。
 - **Eric Evans,《Domain-Driven Design》**：Ubiquitous Language——`CONTEXT.md` 詞彙表的理論根源。
 - **Dan North**：BDD 與 Given/When/Then 的提出者。
 - **[Gherkin](https://cucumber.io/docs/gherkin/)（Cucumber 專案）**：場景檔格式。

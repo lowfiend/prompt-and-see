@@ -32,7 +32,15 @@ claude plugin details prompt-and-see@prompt-and-see      # 16 支 skill 都要�
 ## commit 與版本
 
 - Conventional Commits（`feat:`、`fix:`、`docs:`），單行，無 body。
-- 一個版本一個 commit；`CHANGELOG.md` 在同一個 commit 內更新。
+- 一個版本一個 commit；`CHANGELOG.md` 與 `.claude-plugin/plugin.json` 的 `version` 在同一個 commit 內更新。plugin 快取以版本號為鍵，版本號不動，裝 plugin 的人就拉不到新內容。
+- 新增 skill 要加進 `plugin.json` 的 `skills` 清單。
+- push 後打 tag 並建 Release：
+
+  ```bash
+  claude plugin tag --push .    # 建 prompt-and-see--vX.Y.Z 並推上去
+  ```
+
+  再以該 tag 建 GitHub Release，內容貼 `CHANGELOG.md` 該版本那一節。
 
 ## Pull request
 
